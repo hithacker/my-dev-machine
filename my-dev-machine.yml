@@ -1,0 +1,11 @@
+- name: Configure my local dev machine
+  hosts: localhost
+  tasks:
+    - name: install intellij idea community edition
+      homebrew_cask: 
+        name: intellij-idea-ce 
+        state: present
+    - name: install leiningen
+      homebrew:
+        name: leiningen
+        state: present
